@@ -1,3 +1,14 @@
+### 使用  
+// 加载环境  
+source oe-init-build-env  
+// 清除之前的构建输出  
+bitbake -c cleansstate core-image-customer  
+// 构建  
+bitbake core-image-customer  
+// 用模拟器运行  
+export IMAGE_LINK_NAME=core-image-customer-beaglebone-yocto.rootfs  
+runqemu beaglebone-yocto core-image-customer  
+
 Poky
 ====
 
