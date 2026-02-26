@@ -14,3 +14,4 @@ IMAGE_ROOTFS_EXTRA_SPACE:append = "${@bb.utils.contains("DISTRO_FEATURES", "syst
 IMAGE_FEATURES += "package-management"
 
 IMAGE_INSTALL:append = " helloworld"
+IMAGE_INSTALL:append = " bluez5"
