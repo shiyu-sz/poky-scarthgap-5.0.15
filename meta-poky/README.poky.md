@@ -2,12 +2,14 @@
 // 加载环境  
 source oe-init-build-env  
 // 清除之前的构建输出  
-bitbake -c cleansstate core-image-customer  
+bitbake -c cleansstate my-app-image   
 // 构建  
-bitbake core-image-customer  
+bitbake my-app-image  
 // 用模拟器运行  
-export IMAGE_LINK_NAME=core-image-customer-beaglebone-yocto.rootfs  
-runqemu beaglebone-yocto core-image-customer  
+export IMAGE_LINK_NAME=my-app-image-yocto.rootfs  
+runqemu qemux86-64 serialstdio  
+// 运行QT程序
+qt-helloworld -platform eglfs
 
 Poky
 ====
