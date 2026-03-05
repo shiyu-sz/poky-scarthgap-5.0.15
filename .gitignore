@@ -3,6 +3,7 @@
 /*.patch
 /.repo/
 /build*/
+/rpi_build*/
 pyshtables.py
 pstage/
 scripts/oe-git-proxy-socks
@@ -22,6 +23,7 @@ hob-image-*.bb
 !meta-yocto-imported
 !meta-customer
 !meta-raspberrypi
+!meta-qt5
 /documentation/*/eclipse/
 /documentation/*/*.html
 /documentation/*/*.pdf
