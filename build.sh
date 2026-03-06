@@ -12,11 +12,12 @@ build_env() {
 }
 
 build_app() {
-    cd ./build
+    source oe-init-build-env build
     bitbake my-app-image
 }
 
 run_app() {
+    source oe-init-build-env build
     export IMAGE_LINK_NAME=my-app-image-qemux86-64.rootfs  
     runqemu qemux86-64 serialstdio  
 }

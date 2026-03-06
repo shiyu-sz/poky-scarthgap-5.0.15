@@ -6,6 +6,7 @@ IMAGE_INSTALL:append = " \
     qtbase \
     qtbase-plugins \
     qt-helloworld \
+    lvgl-fbdev-benchmark \
     ttf-dejavu-sans \
     libinput \
 "
