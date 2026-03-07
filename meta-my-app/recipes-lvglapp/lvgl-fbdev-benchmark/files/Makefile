@@ -15,7 +15,7 @@ OBJS = $(SRCS:%.c=$(OBJDIR)/%.o)
 # 编译参数
 # -DLV_CONF_INCLUDE_SIMPLE 解决 lv_conf.h 路径问题
 # -I. 确保能找到当前目录下的 lv_conf.h
-CFLAGS += -Wall -O3 -DLV_CONF_INCLUDE_SIMPLE -I.
+CFLAGS += -g -Wall -O3 -DLV_CONF_INCLUDE_SIMPLE -I.
 
 # 链接参数
 # --start-group 和 --end-group 解决库之间的循环依赖

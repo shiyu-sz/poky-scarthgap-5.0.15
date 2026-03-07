@@ -14,7 +14,7 @@ DEPENDS = "lvgl libdrm"
 
 # 在 lvgl-fbdev-benchmark_1.0.bb 中
 # 确保 CFLAGS 包含了宏定义和头文件搜索路径
-TARGET_CFLAGS:append = " -DLV_CONF_INCLUDE_SIMPLE -I${S}"
+TARGET_CFLAGS:append = " -DLV_CONF_INCLUDE_SIMPLE -I${S} -I${STAGING_INCDIR}/lvgl"
 TARGET_LDFLAGS:append = " -Wl,--start-group -llvgl -llvgl_demos -lpthread -lm -Wl,--end-group"
 
 # 关键：通过 EXTRA_OEMAKE 将 Yocto 的工具链变量传给 Makefile
